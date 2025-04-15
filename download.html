@@ -35,12 +35,10 @@
             <div class="preloader__spinner"></div>
         </div>
     </div>
-    <!-- ===== HEADER (SHARED STYLE) ===== -->
-    <header class="header" id="header"> <!-- Usar a classe 'header' unificada -->
+     <!-- Header -->
+     <header class="header" id="header">
         <nav class="nav container">
              <div class="nav__left">
-                 <!-- Botão Sidebar removido na pág. download (ou pode manter se quiser acesso rápido) -->
-                 <!-- <button class="nav__sidebar-toggle" id="sidebar-toggle" aria-label="Abrir Transações"><i class="ri-menu-unfold-fill"></i></button> -->
                 <a href="index.html" class="nav__logo" aria-label="Voltar à página inicial ATM na Mão">
                   <img src="img/2.png" alt="ATM na Mão Logo" class="nav__logo-img">
                      <span>ATM NA MAO</span>
@@ -48,28 +46,24 @@
              </div>
             <div class="nav__menu" id="nav-menu">
                  <ul class="nav__list">
-                     <!-- Links podem apontar para seções DESTA página ou voltar para index.html -->
-                     <li class="nav__item"><a href="#dl-features" class="nav__link">Funções</a></li>
-                     <li class="nav__item"><a href="#dl-benefits" class="nav__link">Benefícios</a></li>
-                     <li class="nav__item"><a href="#dl-cta-final" class="nav__link active-link">Baixar</a></li>
-                     <li class="nav__item"><a href="about.html" class="nav__link">Sobre</a></li> 
-                      <li class="nav__item"><a href="index.html#contact" class="nav__link">Contato</a></li> <!-- Exemplo link externo -->
+                     <li class="nav__item"><a href="index.html" class="nav__link">Início</a></li>
+                     <li class="nav__item"><a href="#dl-beneits" class="nav__link">Beneficios</a></li>
+                     <li class="nav__item"><a href="#dl-cta-finale" class="nav__link scroll-link">Baixar</a></li>
+                     <li class="nav__item"><a href="#team" class="nav__link scroll-link">Equipa</a></li>
+                     <li class="nav__item"><a href="#contact" class="nav__link scroll-link">Localização</a></li>
+		     <li class="nav__item"><a href="about.html" class="nav__link scroll-link">Sobre</a></li>
                  </ul>
                  <button class="nav__close" id="nav-close" aria-label="Fechar menu">
                      <i class="ri-close-line"></i>
                  </button>
             </div>
             <div class="nav__actions">
-                 <!-- Botão principal pode ser redundante se o link Download já está ativo -->
-                 <!-- <a href="#dl-cta-final" class="button button--primary button--small nav__button"><i class="ri-download-cloud-2-line"></i> <span>Download</span></a> -->
-                 <a href="index.html" class="button button--secondary button--small nav__button button--ghost" style="color: white;">
-                    <i class="ri-home-4-line" style="color: white;"></i> <span>Início</span>
+                 <a href="index.html" class="button button--secondary button--small nav__button button--ghost" aria-label="Voltar à Página Inicial">
+                    <i class="ri-home-4-line" style="color: white;"></i> <span class="nav-button-text" style="color: white;">Início</span>
                  </a>
-                <!-- Theme Toggle -->
                 <button class="nav__theme" id="theme-button" aria-label="Mudar tema">
-                    <i class="ri-moon-line nav__theme-icon"></i>
+                    <i class="ri-moon-line nav__theme-icon"></i> <!-- JS troca para ri-sun-line -->
                 </button>
-                 <!-- Menu Toggle (Mobile) -->
                  <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu">
                      <i class="ri-menu-4-line"></i>
                  </button>
