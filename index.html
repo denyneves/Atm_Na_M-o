@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM na Mão - O Futuro do Acesso a Dinheiro em Luanda</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="ATM na Mão: Acesso instantâneo a ATMs com dinheiro em Luanda. Tecnologia de ponta para evitar taxas e filas. Baixe agora!">
+    <meta name="keywords" content="ATM na Mão, app, aplicativo, ATM, Multicaixa, dinheiro, Luanda, Angola, encontrar dinheiro, sem taxas, futurista, moderno, tecnologia, sidebar, transações, saque, levantamento">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/2.png" type="image/png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Libraries CSS (Slick Slider) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="preload"> <!-- Classe para preloader -->
+
+    <!-- ===== PRELOADER ===== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__content">
+            <img src="img/ico.png" alt="ATM na Mão Logo" class="preloader__logo-img animate-pulse" />
+            <div class="preloader__text">Carregando o futuro...</div>
+            <div class="preloader__spinner"></div>
+        </div>
+    </div>
+
+    <!-- ===== SIDEBAR DE TRANSAÇÕES ===== -->
+    <aside class="sidebar" id="sidebar">
+        <button class="sidebar__close" id="sidebar-close" aria-label="Fechar Sidebar">
+            <i class="ri-arrow-left-s-line"></i>
+        </button>
+        <h3 class="sidebar__title">
+            <i class="ri-exchange-dollar-line"></i> Transações Simuladas
+        </h3>
+        <div class="sidebar__transactions" id="transaction-list">
+            <!-- Transações simuladas serão inseridas aqui pelo JS -->
+            <div class="sidebar__transaction-placeholder">
+                <i class="ri-loader-4-line animate-spin"></i> Aguardando simulações...
+            </div>
+        </div>
+        <div class="sidebar__footer">
+            <i class="ri-secure-payment-line"></i> Simulação segura
+        </div>
+    </aside>
+    <div class="sidebar__overlay" id="sidebar-overlay"></div> <!-- Overlay para fechar ao clicar fora -->
+
+    <!-- ===== HEADER FLUTUANTE E MODERNO ===== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__left">
+                 <!-- Botão para abrir Sidebar -->
+                 <button class="nav__sidebar-toggle" id="sidebar-toggle" aria-label="Abrir Transações Simuladas">
+                    <i class="ri-menu-unfold-fill"></i>
+                 </button>
+                <a href="#" class="nav__logo" aria-label="Página inicial ATM na Mão">
+                    <img src="img/2.png" alt="ATM na Mão Logo" class="nav__logo-img">
+                    <span>ATM NA MÃO</span>
+                </a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#hero" class="nav__link active-link">Início</a></li>
+                    <li class="nav__item"><a href="#features" class="nav__link">Funções</a></li>
+                    <li class="nav__item"><a href="#vantagens" class="nav__link">Vantagens</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">Sobre</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contato</a></li>
+                </ul>
+                <button class="nav__close" id="nav-close" aria-label="Fechar menu">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+
+            <div class="nav__actions">
+                <a href="download.html" class="button button--primary button--small nav__button" style="color: white;">
+                    <i class="ri-download-cloud-2-line" style="color: white;"></i> <span>Baixar APP</span>
+                </a>
+                <!-- Theme Toggle -->
+                <button class="nav__theme" id="theme-button" aria-label="Mudar tema">
+                    <i class="ri-moon-line nav__theme-icon"></i> <!-- Ícone inicial (Lua para tema claro) -->
+                </button>
+                <!-- Menu Toggle (Mobile) -->
+                <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu">
+                    <i class="ri-menu-4-line"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN ===== -->
+    <main class="main" id="main-content">
+
+        <!-- ===== HERO ===== -->
+        <section class="hero section" id="hero">
+            <div class="hero__background-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="hero__container container grid">
+                <div class="hero__data" data-animation="fade-in-up">
+                    <h1 class="hero__title">O Futuro do Dinheiro <br><span class="highlight-gradient">Em Angola.</span></h1>
+                    <p class="hero__description">Localize ATMs Em serviço, Com dinheiro ou Sem sistema, Encontre bancos sem perder tempo em filas, sem estress!.  Bem-vindo ao <strong>ATM na Mão</strong>.</p>
+                    <div class="hero__buttons" data-animation="fade-in-up" data-delay="200">
+                        <a href="#download" class="button button--primary button--flex" style="color: white;">Download App <i class="ri-download-cloud-2-line"></i></a>
+                        <a href="#dl-showcase" class="button button--secondary button--flex button--ghost" style="color: white;">Ver Como Funciona <i class="ri-arrow-right-s-line"></i></a>
+                    </div>
+                </div>
+                <div class="hero__image" data-animation="zoom-in" data-delay="100">
+                    <img src="img/ico.png" alt="Aplicativo ATM na Mão em um smartphone" class="hero__img">
+                </div>
+            </div>
+            <div class="hero__social" data-stagger="100">
+                 <a href="https://web.facebook.com/pixelhubangola" target="_blank" aria-label="ATM na Mão no Facebook" class="hero__social-link animate-on-scroll" data-animation="slide-in-left"><i class="ri-facebook-circle-fill"></i></a>
+                 <a href="https://www.instagram.com/pixelhub_tech/" target="_blank" aria-label="ATM na Mão no Instagram" class="hero__social-link animate-on-scroll" data-animation="slide-in-left" data-delay="100"><i class="ri-instagram-fill"></i></a>
+                 <a href="https://api.whatsapp.com/send?phone=244930880427&text=Olá ATM na Mão!" target="_blank" aria-label="ATM na Mão no WhatsApp" class="hero__social-link animate-on-scroll" data-animation="slide-in-left" data-delay="200"><i class="ri-whatsapp-fill"></i></a>
+            </div>
+        </section>
+
+        <!-- ===== FEATURES ===== -->
+        <section class="features section" id="features">
+             <span class="section__subtitle" data-animation="fade-in">Tecnologia a Seu Favor</span>
+             <h2 class="section__title" data-animation="fade-in" data-delay="100">Funcionalidades <span class="highlight">Revolucionárias</span></h2>
+             <div class="features__container container grid" data-stagger="150">
+
+                <!-- Feature Card 1: Mapa Inteligente -->
+                <div class="feature__card" data-animation="slide-up" role="button" tabindex="0" data-modal-target="#modal-mapa">
+                    <div class="feature__header">
+                        <div class="feature__icon"><i class="ri-map-pin-time-line"></i></div>
+                        <h3 class="feature__title">Mapa Inteligente</h3>
+                    </div>
+                    <p class="feature__description">Visualize ATMs com dinheiro confirmado em tempo real. Rotas e filtros na ponta dos dedos.</p>
+                    <span class="feature__more"><i class="ri-add-circle-line"></i> Ver Detalhes</span>
+                </div>
+
+                <!-- Feature Card 2: Status Dinâmico -->
+                <div class="feature__card" data-animation="slide-up" data-delay="50" role="button" tabindex="0" data-modal-target="#modal-status">
+                    <div class="feature__header">
+                        <div class="feature__icon"><i class="ri-line-chart-line"></i></div>
+                        <h3 class="feature__title">Status Dinâmico</h3>
+                    </div>
+                    <p class="feature__description">Informações atualizadas pela comunidade e algoritmos preditivos. Nível de confiança claro.</p>
+                    <span class="feature__more"><i class="ri-add-circle-line"></i> Ver Detalhes</span>
+                </div>
+
+                <!-- Feature Card 3: Rotas Otimizadas -->
+                 <div class="feature__card" data-animation="slide-up" data-delay="100" role="button" tabindex="0" data-modal-target="#modal-rotas">
+                    <div class="feature__header">
+                        <div class="feature__icon"><i class="ri-route-line"></i></div>
+                        <h3 class="feature__title">Rotas Otimizadas</h3>
+                    </div>
+                    <p class="feature__description">Encontre o caminho mais rápido e seguro até o ATM disponível mais próximo de você.</p>
+                    <span class="feature__more"><i class="ri-add-circle-line"></i> Ver Detalhes</span>
+                </div>
+
+                 <!-- Feature Card 4: Filtros Avançados -->
+                 <div class="feature__card" data-animation="slide-up" data-delay="150" role="button" tabindex="0" data-modal-target="#modal-filtros">
+                    <div class="feature__header">
+                        <div class="feature__icon"><i class="ri-filter-3-line"></i></div>
+                        <h3 class="feature__title">Filtros Avançados</h3>
+                    </div>
+                    <p class="feature__description">Busque por banco, serviços específicos, acessibilidade, raio e até tipos de notas.</p>
+                     <span class="feature__more"><i class="ri-add-circle-line"></i> Ver Detalhes</span>
+                 </div>
+
+                 <!-- Feature Card 5: Economia Garantida -->
+                 <div class="feature__card" data-animation="slide-up" data-delay="200" role="button" tabindex="0" data-modal-target="#modal-economia">
+                     <div class="feature__header">
+                        <div class="feature__icon"><i class="ri-secure-payment-line"></i></div>
+                        <h3 class="feature__title">Simulador de Economia</h3>
+                    </div>
+                    <p class="feature__description">Calcule quanto poupa evitando taxas informais exorbitantes. Use canais seguros!</p>
+                    <span class="feature__more"><i class="ri-add-circle-line"></i> Ver Detalhes</span>
+                 </div>
+
+                 <!-- Feature Card 6: Rede Colaborativa -->
+                <div class="feature__card" data-animation="slide-up" data-delay="250" role="button" tabindex="0" data-modal-target="#modal-colaborativa">
+                    <div class="feature__header">
+                        <div class="feature__icon"><i class="ri-user-voice-line"></i></div>
+                        <h3 class="feature__title">Rede Colaborativa</h3>
+                    </div>
+                    <p class="feature__description">Reporte o status, ganhe pontos e ajude a manter a precisão para toda a comunidade.</p>
+                     <span class="feature__more"><i class="ri-add-circle-line"></i> Ver Detalhes</span>
+                 </div>
+             </div>
+         </section>
+
+     
+
+         <!-- ===== TECNOLOGIA E FUTURO ===== -->
+        <section class="tech-future section" id="tech-future">
+            <span class="section__subtitle" data-animation="fade-in">Inovação Contínua</span>
+            <h2 class="section__title" data-animation="fade-in" data-delay="100">A Tecnologia Que Impulsiona <span class="highlight">o Amanhã</span></h2>
+
+            <div class="tech-future__container container grid">
+                <div class="tech-future__visual" data-animation="slide-in-left" data-delay="300">
+                    <img src="img/phone1.png" alt="Representação gráfica de rede neural, dados e segurança" class="tech-future__img">
+                    <div class="tech-future__glow tech-future__glow--1"></div>
+                    <div class="tech-future__glow tech-future__glow--2"></div>
+                </div>
+
+                <div class="tech-future__content" data-stagger="100">
+                    <h3 class="tech-future__heading" data-animation="fade-in">Construído Sobre Pilares <span class="highlight">Sólidos</span></h3>
+                    <p class="tech-future__description" data-animation="fade-in">
+                        O ATM na Mão não é apenas um mapa. É uma plataforma inteligente que utiliza tecnologia de ponta para oferecer a informação mais precisa e segura possível, evoluindo constantemente.
+                    </p>
+
+                    <div class="tech-accordion">
+                        <div class="tech-accordion__item" data-animation="slide-up">
+                            <header class="tech-accordion__header" role="button" tabindex="0" aria-expanded="false">
+                                <i class="ri-database-2-line tech-accordion__icon-main"></i>
+                                <h4 class="tech-accordion__title">Dados em Tempo Real</h4>
+                                <i class="ri-add-line tech-accordion__icon-toggle"></i>
+                            </header>
+                            <div class="tech-accordion__content">
+                                <p>Combinamos a força da comunidade (reportes), algoritmos preditivos baseados em padrões históricos e (quando disponíveis) APIs bancárias para manter o status dos ATMs o mais atualizado e confiável possível.</p>
+                            </div>
+                        </div>
+
+                        <div class="tech-accordion__item" data-animation="slide-up" data-delay="50">
+                            <header class="tech-accordion__header" role="button" tabindex="0" aria-expanded="false">
+                                <i class="ri-route-fill tech-accordion__icon-main"></i> <!-- Changed Icon -->
+                                <h4 class="tech-accordion__title">Otimização Inteligente</h4>
+                                <i class="ri-add-line tech-accordion__icon-toggle"></i>
+                            </header>
+                            <div class="tech-accordion__content">
+                                <p>Nossos sistemas analisam padrões para prever disponibilidade e integram-se com serviços de mapas avançados para oferecer as rotas mais eficientes, considerando tráfego e segurança estimada.</p>
+                            </div>
+                        </div>
+
+                         <div class="tech-accordion__item" data-animation="slide-up" data-delay="100">
+                            <header class="tech-accordion__header" role="button" tabindex="0" aria-expanded="false">
+                                <i class="ri-shield-keyhole-line tech-accordion__icon-main"></i>
+                                <h4 class="tech-accordion__title">Segurança Robusta</h4>
+                                <i class="ri-add-line tech-accordion__icon-toggle"></i>
+                            </header>
+                            <div class="tech-accordion__content">
+                                <p>Priorizamos a sua segurança e privacidade. Utilizamos práticas modernas de desenvolvimento seguro, criptografia de dados e promovemos o uso de canais financeiros oficiais e seguros.</p>
+                            </div>
+                        </div>
+
+                        <div class="tech-accordion__item" data-animation="slide-up" data-delay="150">
+                           <header class="tech-accordion__header" role="button" tabindex="0" aria-expanded="false">
+                               <i class="ri-cloud-line tech-accordion__icon-main"></i>
+                               <h4 class="tech-accordion__title">Plataforma Escalável</h4>
+                               <i class="ri-add-line tech-accordion__icon-toggle"></i>
+                           </header>
+                           <div class="tech-accordion__content">
+                               <p>Nossa infraestrutura é construída na nuvem usando microserviços, garantindo alta performance, disponibilidade global e a capacidade de crescer e adicionar novas funcionalidades rapidamente.</p>
+                           </div>
+                       </div>
+                    </div>
+
+                    <div class="tech-future__outlook" data-animation="fade-in" data-delay="300">
+                        <i class="ri-rocket-line"></i> <!-- Changed Icon -->
+                        <div>
+                            <h4>Olhando para o <span class="highlight">Futuro</span></h4>
+                            <p>Estamos comprometidos com a inovação: expandir para novas cidades, integrar pagamentos móveis, introduzir IA para análise de segurança de rotas e recompensar nossa comunidade colaborativa!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== VANTAGENS ===== -->
+        <section class="vantagens section" id="vantagens">
+            <span class="section__subtitle" data-animation="fade-in">Sua Vida Simplificada</span>
+            <h2 class="section__title" data-animation="fade-in" data-delay="100">Por Que Escolher <span class="highlight-gradient">ATM na Mão?</span></h2>
+
+<div class="vantagens__container container grid" 
+     style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 800px; margin: 0 auto;">
+
+    <div class="vantagem__item" data-animation="slide-in-left" data-modal-target="#modal-vantagem-tempo" role="button" tabindex="0"
+         style="flex: 0 0 calc(50% - 1rem); display: flex; flex-direction: column; align-items: center; background: #f5f5f5; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center;">
+        <i class="ri-timer-flash-line vantagem__icon" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+        <h3 class="vantagem__title">Tempo é Dinheiro</h3>
+        <p class="vantagem__description" style="font-size: 0.9rem;">Chega de procurar ATMs em vão. Vá direto ao ponto com informação precisa.</p>
+        <span class="vantagem__expand-indicator" style="margin-top: 0.5rem;"><i class="ri-add-circle-line"></i> Saiba mais</span>
+    </div>
+
+    <div class="vantagem__item" data-animation="slide-in-left" data-delay="50" data-modal-target="#modal-vantagem-economia" role="button" tabindex="0"
+         style="flex: 0 0 calc(50% - 1rem); display: flex; flex-direction: column; align-items: center; background: #f5f5f5; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center;">
+        <i class="ri-money-dollar-box-line vantagem__icon" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+        <h3 class="vantagem__title">Economia Real</h3>
+        <p class="vantagem__description" style="font-size: 0.9rem;">Fuja das taxas abusivas das ruas. Use seu dinheiro de forma inteligente e segura.</p>
+        <span class="vantagem__expand-indicator" style="margin-top: 0.5rem;"><i class="ri-add-circle-line"></i> Saiba mais</span>
+    </div>
+
+    <div class="vantagem__item" data-animation="slide-in-left" data-delay="100" data-modal-target="#modal-vantagem-seguranca" role="button" tabindex="0"
+         style="flex: 0 0 calc(50% - 1rem); display: flex; flex-direction: column; align-items: center; background: #f5f5f5; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center;">
+        <i class="ri-shield-check-line vantagem__icon" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+        <h3 class="vantagem__title">Segurança Reforçada</h3>
+        <p class="vantagem__description" style="font-size: 0.9rem;">Faça levantamentos em locais oficiais e seguros, minimizando riscos.</p>
+        <span class="vantagem__expand-indicator" style="margin-top: 0.5rem;"><i class="ri-add-circle-line"></i> Saiba mais</span>
+    </div>
+
+    <div class="vantagem__item" data-animation="slide-in-left" data-delay="150" data-modal-target="#modal-vantagem-conveniencia" role="button" tabindex="0"
+         style="flex: 0 0 calc(50% - 1rem); display: flex; flex-direction: column; align-items: center; background: #f5f5f5; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center;">
+        <i class="ri-thumb-up-line vantagem__icon" style="font-size: 2rem; margin-bottom: 0.5rem;"></i>
+        <h3 class="vantagem__title">Conveniência Total</h3>
+        <p class="vantagem__description" style="font-size: 0.9rem;">A informação que você precisa, na palma da sua mão, a qualquer hora e lugar.</p>
+        <span class="vantagem__expand-indicator" style="margin-top: 0.5rem;"><i class="ri-add-circle-line"></i> Saiba mais</span>
+    </div>
+</div>
+<br></br><br></br>
+
+        <!-- ===== Showcase Section (Slider Melhorado) ===== -->
+        <section class="dl-section dl-showcase" id="dl-showcase">
+            <div class="dl-background-glow glow-showcase"></div>
+            <div class="container">
+                <h2 class="dl-section-title" data-animation="fade-in-up">Interface <span class="highlight">Intuitiva</span>, Experiência <span class="highlight">Fluida</span></h2>
+                <p class="dl-section-subtitle" data-animation="fade-in-up" data-delay="100">Explore o design moderno criado para facilitar sua vida.</p>
+
+                <div class="dl-showcase-slider-wrapper" data-animation="zoom-in" data-delay="150">
+                    <div class="dl-showcase-slider">
+                        <div class="slider-item">
+                            <h3 class="slider-title">1. Abra e Localize</h3>
+                            <img src="img/fine.png" alt="Tela do app mostrando mapa com ATMs e sua localização" class="dl-screenshot">
+                        </div>
+                        <div class="slider-item">
+                             <h3 class="slider-title">2. Filtre e Verifique</h3>
+                            <img src="img/fine2.jpg" alt="Tela do app mostrando filtros avançados e detalhes de um ATM" class="dl-screenshot">
+                        </div>
+                        <div class="slider-item">
+                             <h3 class="slider-title">3. Navegue e Levante</h3>
+                            <img src="img/fine3.jpg" alt="Tela do app mostrando rota para o ATM e confirmação de levantamento" class="dl-screenshot">
+                        </div>
+                        <div class="slider-item">
+                             <h3 class="slider-title">4. Contribua e Ganhe</h3>
+                            <img src="img/fine4.png" alt="Tela do app mostrando opção de reportar status e gamificação" class="dl-screenshot">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TESTIMONIALS - CAROUSEL ===== -->
+<section class="testimonials section" id="testimonials" style="padding: 2rem 1rem; text-align: center;">
+  <span class="section__subtitle" data-animation="fade-in">Vozes Reais</span>
+  <h2 class="section__title" data-animation="fade-in" data-delay="100">
+    O Que Dizem Nossos <span class="highlight">Beta Testers</span>
+  </h2>
+
+  <div class="carousel-container" style="position: relative; overflow: hidden; max-width: 700px; margin: auto;">
+    <div class="carousel-track" id="carouselTrack" style="display: flex; transition: transform 0.5s ease;">
+      <!-- CARD 1 -->
+      <div class="testimonial__card" style="min-width: 100%; padding: 2rem;">
+        <img src="img/augusto.jpg" alt="Foto de Augusto" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+        <p style="font-size: 0.95rem;">"Revolucionário! Finalmente uma solução para o caos dos ATMs em Luanda. Poupei tempo e stress logo no primeiro uso."</p>
+        <h4 style="margin: 0.5rem 0 0;">Augusto Neves</h4>
+        <span style="font-size: 0.85rem; color: #777;">Engenheiro</span>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="testimonial__card" style="min-width: 100%; padding: 2rem;">
+        <img src="img/geovane.jpg" alt="Foto de Geovane" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+        <p style="font-size: 0.95rem;">"Estava farto de pagar taxas absurdas na rua. O ATM na Mão deu-me a liberdade de aceder ao meu dinheiro de forma justa. Recomendo!"</p>
+        <h4 style="margin: 0.5rem 0 0;">Jeovanny Gabriel</h4>
+        <span style="font-size: 0.85rem; color: #777;">Designer</span>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="testimonial__card" style="min-width: 100%; padding: 2rem;">
+        <img src="img/belmiro.jpg" alt="Foto de Belmiro" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+        <p style="font-size: 0.95rem;">"A interface é limpa e super fácil de usar. A informação em tempo real é o grande diferencial. Parabéns à equipa!"</p>
+        <h4 style="margin: 0.5rem 0 0;">Belmiro Miguel</h4>
+        <span style="font-size: 0.85rem; color: #777;">Desenvolvedor</span>
+      </div>
+    </div>
+
+    <!-- Botões -->
+    <button id="prevBtn" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 2rem; cursor: pointer;">&#10094;</button>
+    <button id="nextBtn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 2rem; cursor: pointer;">&#10095;</button>
+  </div>
+</section>
+
+<script>
+  const track = document.getElementById('carouselTrack');
+  const prev = document.getElementById('prevBtn');
+  const next = document.getElementById('nextBtn');
+  let index = 0;
+
+  next.addEventListener('click', () => {
+    index = (index + 1) % 3; // 3 cards
+    track.style.transform = `translateX(-${index * 100}%)`;
+  });
+
+  prev.addEventListener('click', () => {
+    index = (index - 1 + 3) % 3;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  });
+
+  // Auto play opcional:
+  setInterval(() => {
+    index = (index + 1) % 3;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }, 7000);
+</script>
+
+
+        <!-- ===== FAQ ===== -->
+        <section class="faq section" id="faq">
+            <span class="section__subtitle" data-animation="fade-in">Tire Suas Dúvidas</span>
+            <h2 class="section__title" data-animation="fade-in" data-delay="100">Perguntas Frequentes</h2>
+            <div class="faq__container container grid">
+                <div class="faq__group" data-stagger="100">
+                     <div class="faq__item" data-animation="fade-in">
+                         <header class="faq__header" role="button" tabindex="0"><i class="ri-add-line faq__icon"></i><h3 class="faq__title">O ATM na Mão é gratuito?</h3></header>
+                         <div class="faq__content"><p>Sim, o uso principal do aplicativo para localizar ATMs com dinheiro e verificar status é totalmente gratuito. Poderão existir funcionalidades premium opcionais no futuro.</p></div>
+                     </div>
+                     <div class="faq__item" data-animation="fade-in" data-delay="50">
+                         <header class="faq__header" role="button" tabindex="0"><i class="ri-add-line faq__icon"></i><h3 class="faq__title">Como a informação sobre o dinheiro é atualizada?</h3></header>
+                         <div class="faq__content"><p>Nossa força vem da combinação de: 1) Reportes da comunidade em tempo real. 2) Algoritmos de IA que analisam padrões históricos. 3) Verificações periódicas e parcerias (quando disponíveis).</p></div>
+                     </div>
+                     <div class="faq__item" data-animation="fade-in" data-delay="100">
+                        <header class="faq__header" role="button" tabindex="0"><i class="ri-add-line faq__icon"></i><h3 class="faq__title">A informação é 100% garantida?</h3></header>
+                         <div class="faq__content"><p>Nós nos esforçamos para ter a informação mais precisa possível, combinando múltiplas fontes. No entanto, devido à natureza dinâmica, não podemos garantir 100% em todos os momentos. Sempre mostramos o nível de confiança e a hora da última atualização.</p></div>
+                     </div>
+                 </div>
+                 <div class="faq__group" data-stagger="100" data-delay="150">
+                     <div class="faq__item" data-animation="fade-in">
+                         <header class="faq__header" role="button" tabindex="0"><i class="ri-add-line faq__icon"></i><h3 class="faq__title">O aplicativo funciona fora de Luanda?</h3></header>
+                         <div class="faq__content"><p>Inicialmente, nosso foco é otimizar a experiência em Luanda, onde o problema é mais crítico. Planejamos expandir para outras cidades angolanas e, futuramente, outros países conforme a demanda e a viabilidade.</p></div>
+                     </div>
+                     <div class="faq__item" data-animation="fade-in" data-delay="50">
+                         <header class="faq__header" role="button" tabindex="0"><i class="ri-add-line faq__icon"></i><h3 class="faq__title">Como posso contribuir com informações?</h3></header>
+                         <div class="faq__content"><p>É muito simples! Dentro do app, ao visualizar um ATM, você terá botões para confirmar rapidamente se ele tem dinheiro, se está sem dinheiro ou se há outro problema. Sua contribuição ajuda toda a comunidade!</p></div>
+                     </div>
+                    <div class="faq__item" data-animation="fade-in" data-delay="100">
+                         <header class="faq__header" role="button" tabindex="0"><i class="ri-add-line faq__icon"></i><h3 class="faq__title">Quando o app estará disponível?</h3></header>
+                         <div class="faq__content"><p>Estamos na fase final de testes beta! Registe seu email na seção abaixo para ser um dos primeiros a saber do lançamento oficial para Android e iOS.</p></div>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== DOWNLOAD / CTA FINAL ===== -->
+        <section class="download section" id="download">
+            <div class="download__background">
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+            <div class="download__container container grid">
+                <div class="download__data">
+                    <span class="section__subtitle text-white" data-animation="fade-in">Lançamento <span class="highlight">em Breve</span></span>
+                    <h2 class="section__title text-white" data-animation="fade-in" data-delay="100">Prepare-se Para o Futuro.</h2>
+                    <p class="download__description" data-animation="fade-in" data-delay="200">Seja o primeiro a saber quando o ATM na Mão estiver disponível para download. Deixe seu email e entre na lista VIP!</p>
+                    <form action="subscribe.php" method="POST" class="download__form" data-animation="fade-in" data-delay="300" id="subscribe-form">
+                        <input type="email" name="email" placeholder="Digite seu melhor email" required class="download__input" autocomplete="email">
+                    <button type="submit" class="button button--primary button--flex" style="color: white;">Notifique-me <i class="ri-send-plane-fill" style="color: white;"></i>
+</button>
+
+                    </form>
+                     <div id="subscribe-feedback" class="action-feedback"></div>
+                    <div class="download__stores" data-animation="fade-in" data-delay="400">
+                        <a href="#" target="_blank" aria-label="Em breve no Google Play">
+                            <img src="img/teste(2).png" alt="Em breve no Google Play" class="download__store-img">
+                        </a>
+                        <a href="#" target="_blank" aria-label="Em breve na App Store">
+                            <img src="img/teste(1).png" alt="Em breve na App Store" class="download__store-img">
+                        </a>
+                    </div>
+                </div>
+                <div class="download__image" data-animation="slide-in-right" data-delay="400">
+                    <img src="img/atm1.png" alt="Aplicativo ATM na Mão em um smartphone" class="hero__img">
+                </div>
+            </div>
+        </section>
+
+         <!-- ===== CONTACT ===== -->
+        <section class="contact section" id="contact">
+            <span class="section__subtitle" data-animation="fade-in">Conecte-se Conosco</span>
+            <h2 class="section__title" data-animation="fade-in" data-delay="100">Tem Uma Ideia ou <span class="highlight">Dúvida?</span></h2>
+            <div class="contact__container container grid">
+                <div class="contact__content" data-stagger="100">
+                    <h3 class="contact__title" data-animation="slide-in-left">Fale Conosco Diretamente</h3>
+                    <div class="contact__info">
+                        <div class="contact__card" data-animation="slide-in-left">
+                            <i class="ri-mail-send-line contact__card-icon"></i>
+                            <h4 class="contact__card-title">Email</h4>
+                            <span class="contact__card-data">geral@atmnamao.ao</span>
+                            <a href="mailto:geral@atmnamao.ao" target="_blank" class="contact__button">Enviar Email <i class="ri-arrow-right-s-line"></i></a>
+                        </div>
+                        <div class="contact__card" data-animation="slide-in-left" data-delay="50">
+                            <i class="ri-whatsapp-line contact__card-icon"></i>
+                            <h4 class="contact__card-title">WhatsApp</h4>
+                            <span class="contact__card-data">+244 930 880 427</span>
+                            <a href="https://api.whatsapp.com/send?phone=244930880427&text=Olá%20ATM%20na%20Mão!%20Tenho%20uma%20dúvida." target="_blank" class="contact__button">Conversar Agora <i class="ri-arrow-right-s-line"></i></a>
+                        </div>
+                        <div class="contact__card" data-animation="slide-in-left" data-delay="100">
+                            <i class="ri-community-line contact__card-icon"></i>
+                            <h4 class="contact__card-title">Redes Sociais</h4>
+                            <span class="contact__card-data">@atmnamaoapp</span>
+                            <div class="contact__social">
+                                <a href="https://web.facebook.com/pixelhubangola" target="_blank" aria-label="Visitar Facebook" class="contact__social-link"><i class="ri-facebook-circle-fill"></i></a>
+                                <a href="https://www.instagram.com/pixelhub_tech/" target="_blank" aria-label="Visitar Instagram" class="contact__social-link"><i class="ri-instagram-fill"></i></a>
+                                <a href="https://www.linkedin.com/company/pixelhub-angola/" target="_blank" aria-label="Visitar LinkedIn" class="contact__social-link"><i class="ri-linkedin-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__content" data-animation="slide-in-right" data-delay="100">
+                     <h3 class="contact__title">Ou Envie Sua Mensagem</h3>
+                    <form action="contact.php" method="POST" class="contact__form" id="contact-form">
+                        <div class="contact__form-div" data-animation="fade-in" data-delay="150">
+                            <input type="text" id="contact-name" name="name" placeholder=" " required class="contact__form-input">
+                            <label for="contact-name" class="contact__form-tag">Nome Completo</label>
+                        </div>
+                        <div class="contact__form-div" data-animation="fade-in" data-delay="200">
+                            <input type="email" id="contact-email" name="email" placeholder=" " required class="contact__form-input" autocomplete="email">
+                            <label for="contact-email" class="contact__form-tag">Seu Melhor Email</label>
+                        </div>
+                        <div class="contact__form-div" data-animation="fade-in" data-delay="250">
+                            <input type="text" id="contact-subject" name="subject" placeholder=" " class="contact__form-input">
+                            <label for="contact-subject" class="contact__form-tag">Assunto (Opcional)</label>
+                        </div>
+                        <div class="contact__form-div contact__form-area" data-animation="fade-in" data-delay="300">
+                            <textarea id="contact-message" name="message" placeholder=" " required class="contact__form-input"></textarea>
+                            <label for="contact-message" class="contact__form-tag">Sua Mensagem</label>
+                        </div>
+                         <div id="contact-feedback" class="action-feedback"></div>
+                        <button type="submit" class="button button--primary button--flex" data-animation="fade-in" data-delay="350">
+                            Enviar Mensagem <i class="ri-send-plane-2-line"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <img src="img/2.png" alt="ATM na Mão Logo" class="footer__logo-img">
+                    <span>ATM NA MÃO</span>
+                </a>
+                <p class="footer__description">Transformando o acesso a dinheiro em Luanda. <br> Simples, rápido e sem taxas abusivas.</p>
+                 <div class="footer__social">
+                    <a href="https://web.facebook.com/pixelhubangola" target="_blank" aria-label="ATM na Mão no Facebook" class="footer__social-link"><i class="ri-facebook-fill"></i></a>
+                    <a href="https://www.instagram.com/pixelhub_tech/" target="_blank" aria-label="ATM na Mão no Instagram" class="footer__social-link"><i class="ri-instagram-fill"></i></a>
+                    <a href="https://www.linkedin.com/company/pixelhub-angola/" target="_blank" aria-label="Visitar LinkedIn" class="footer__social-link"><i class="ri-linkedin-fill"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=244930880427&text=Olá%20ATM%20na%20Mão!" target="_blank" aria-label="ATM na Mão no WhatsApp" class="footer__social-link"><i class="ri-whatsapp-fill"></i></a>
+                </div>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Navegação</h3>
+                <ul class="footer__links">
+                    <li><a href="#hero" class="footer__link">Início</a></li>
+                    <li><a href="#features" class="footer__link">Funcionalidades</a></li>
+                     <li><a href="#saque-simulado-section" class="footer__link">Simular Saque</a></li>
+                    <li><a href="#dl-showcase" class="footer__link">Como Funciona</a></li>
+                    <li><a href="#faq" class="footer__link">FAQ</a></li>
+                    <li><a href="#contact" class="footer__link">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Legal</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Política de Privacidade</a></li>
+                    <li><a href="#" class="footer__link">Termos de Serviço</a></li>
+                    <li><a href="#" class="footer__link">Política de Cookies</a></li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Contato</h3>
+                <ul class="footer__links">
+                    <li><a href="mailto:geral@atmnamao.ao" class="footer__link">geral@atmnamao.ao</a></li>
+                    <li><a href="#contact" class="footer__link">Formulário de Contato</a></li>
+                    <li><span class="footer__link--static"><i class="ri-map-pin-line"></i> Luanda, Angola</span></li>
+                </ul>
+            </div>
+        </div>
+         <div class="footer__bottom">
+             <span class="footer__copy">© <span id="current-year"></span> ATM na Mão by <a href="https://pixelhub.ao" target="_blank" rel="noopener noreferrer">Pixelhub</a>. Todos os direitos reservados.</span>
+         </div>
+    </footer>
+
+    <!-- ===================================================== -->
+    <!-- ============ MODALS APRIMORADOS E NOVOS ============= -->
+    <!-- ===================================================== -->
+
+    <!-- Modal: Mapa Inteligente Aprimorado -->
+    <div class="modal" id="modal-mapa" aria-hidden="true" aria-labelledby="modal-mapa-title">
+        <div class="modal__overlay" tabindex="-1" data-modal-close></div>
+        <div class="modal__container modal--large" role="dialog" aria-modal="true">
+            <header class="modal__header">
+                <h2 class="modal__title" id="modal-mapa-title"><i class="ri-radar-line"></i> Mapa Inteligente (Simulação Interativa)</h2>
+                <button class="modal__close" aria-label="Fechar modal" data-modal-close><i class="ri-close-line"></i></button>
+            </header>
+            <main class="modal__content">
+                <p>Explore o mapa simulado. Clique nos pins <i class="ri-pushpin-fill"></i> para ver detalhes e opções.</p>
+                <div class="map-controls">
+                     <button class="button button--flex button--small button--secondary button--ghost" id="btn-find-me">
+                         <i class="ri-crosshairs-line button__icon"></i> <span class="button__text">Onde Estou?</span> <span class="spinner"></span>
+                     </button>
+                     <div class="map-zoom-sim">
+                         <button class="button button--icon button--small button--ghost" aria-label="Zoom in"><i class="ri-add-line"></i></button>
+                         <button class="button button--icon button--small button--ghost" aria-label="Zoom out"><i class="ri-subtract-line"></i></button>
+                     </div>
+                     <ul class="map-legend">
+                        <li><i class="ri-checkbox-blank-circle-fill pin-legend available"></i> Com Dinheiro</li>
+                        <li><i class="ri-checkbox-blank-circle-fill pin-legend likely"></i> Provável</li>
+                        <li><i class="ri-checkbox-blank-circle-fill pin-legend unavailable"></i> Sem Dinheiro</li>
+                        <li><i class="ri-user-location-fill pin-legend user"></i> Você</li>
+                     </ul>
+                </div>
+                 <div class="action-feedback" id="map-feedback"></div>
+
+                <div class="map-dynamic-layout">
+                    <div class="map-container" id="map-sim-container">
+                       <iframe
+                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252231.9333138815!2d13.097863704621076!3d-8.85269120762617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f16593570877%3A0x77583d41f7605533!2sLuanda%2C%20Angola!5e0!3m2!1spt-PT!2spt!4v1715100000000!5m2!1spt-PT!2spt"
+                           width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de Luanda Fundo">
+                       </iframe>
+                       <!-- Pins Simulados -->
+                       <div class="map-pin simulated-pin pin-available" style="top: 30%; left: 40%;" data-atm-id="atm1" data-atm-name="BAI - Alvalade" data-atm-status="available" data-last-update="Há 5 min" data-confidence="95" aria-label="ATM BAI Alvalade"></div>
+                       <div class="map-pin simulated-pin pin-unavailable" style="top: 50%; left: 60%;" data-atm-id="atm2" data-atm-name="BFA - Sagrada Família" data-atm-status="unavailable" data-last-update="Há 2 horas" data-confidence="80" aria-label="ATM BFA Sagrada Família"></div>
+                       <div class="map-pin simulated-pin pin-likely" style="top: 65%; left: 35%;" data-atm-id="atm3" data-atm-name="BIC - Vila Alice" data-atm-status="likely" data-last-update="Há 30 min" data-confidence="70" aria-label="ATM BIC Vila Alice"></div>
+                       <div class="map-pin simulated-pin pin-user" style="top: 55%; left: 50%;" aria-label="Sua Localização Simulada"></div>
+                    </div>
+
+                     <!-- Detalhes do ATM -->
+                     <div class="atm-details-dynamic scrollable-content" id="atm-details">
+                         <span class="placeholder-text"><i class="ri-cursor-line"></i> Clique num pin no mapa para ver detalhes.</span>
+                         <!-- Conteúdo dinâmico aqui -->
+                     </div>
+                </div>
+
+                <div class="permission-note">
+                    <i class="ri-lock-line"></i> Localização e interações reais requerem o app e permissões de localização.
+                </div>
+            </main>
+            <footer class="modal__footer">
+                <button class="button button--ghost" data-modal-close>Fechar Mapa</button>
+                 <!-- Trigger Escondido para Modal de Rotas -->
+                 <a href="#" id="modal-rotas-trigger-placeholder" data-modal-target="#modal-rotas" style="display:none;">Abrir Rotas</a>
+                 <!-- Trigger Escondido para Modal de Colaboração -->
+                 <a href="#" id="modal-colaborativa-trigger-placeholder" data-modal-target="#modal-colaborativa" style="display:none;">Reportar Status</a>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal: Status Dinâmico Aprimorado -->
+    <div class="modal" id="modal-status" aria-hidden="true" aria-labelledby="modal-status-title">
+        <div class="modal__overlay" tabindex="-1" data-modal-close></div>
+        <div class="modal__container" role="dialog" aria-modal="true">
+            <header class="modal__header">
+                <h2 class="modal__title" id="modal-status-title"><i class="ri-pulse-line"></i> Status Dinâmico e Confiança</h2>
+                <button class="modal__close" aria-label="Fechar modal" data-modal-close><i class="ri-close-line"></i></button>
+            </header>
+            <main class="modal__content scrollable-content">
+                 <p>Entenda como determinamos o status de um ATM e a confiança da informação em tempo real.</p>
+                 <div class="status-refresh-area">
+                     <button class="button button--flex button--small button--primary" id="btn-refresh-status">
+                         <i class="ri-refresh-line button__icon"></i> <span class="button__text">Atualizar Status</span> <span class="spinner"></span>
+                     </button>
+                     <div class="timestamp" id="status-timestamp">
+                         <i class="ri-time-line"></i> Última Verificação: <strong id="status-time">--:--:--</strong>
+                    </div>
+                 </div>
+                 <div class="action-feedback" id="status-feedback"></div>
+
+                 <h4><i class="ri-bubble-chart-line"></i> Fontes de Dados (Simulação)</h4>
+                <div class="status-sources-grid" id="status-sources-container">
+                    <div class="info-block status-source" data-source="community">
+                        <span class="status-source-icon"><i class="ri-user-voice-line"></i></span>
+                        <h5>Comunidade</h5>
+                        <p class="status-source-detail" id="community-detail">Aguardando...</p>
+                        <div class="confidence-bar"><div class="confidence-fill" id="community-confidence" style="width: 0%;"></div></div>
+                        <small class="confidence-value" id="community-confidence-val">0%</small>
+                    </div>
+                     <div class="info-block status-source" data-source="prediction">
+                         <span class="status-source-icon"><i class="ri-robot-line"></i></span>
+                         <h5>Predição</h5>
+                         <p class="status-source-detail" id="prediction-detail">Calculando...</p>
+                          <div class="confidence-bar"><div class="confidence-fill" id="prediction-confidence" style="width: 0%;"></div></div>
+                          <small class="confidence-value" id="prediction-confidence-val">0%</small>
+                     </div>
+                     <div class="info-block status-source" data-source="verification">
+                          <span class="status-source-icon"><i class="ri-shield-check-line"></i></span>
+                         <h5>Verificação</h5>
+                         <p class="status-source-detail" id="verification-detail">N/D</p>
+                          <div class="confidence-bar"><div class="confidence-fill" id="verification-confidence" style="width: 0%;"></div></div>
+                          <small class="confidence-value" id="verification-confidence-val">0%</small>
+                     </div>
+                </div>
+
+                 <div class="status-summary">
+                    <h4><i class="ri-check-double-line"></i> Status Consolidado & Confiança</h4>
+                     <div class="consolidated-status" id="consolidated-status-display">
+                         <span class="status-badge status--unknown" id="consolidated-badge">Indefinido</span>
+                         <p id="status-interpretation">Aguardando dados...</p>
+                         <div class="overall-confidence">
+                             Confiança Geral: <strong id="overall-confidence-value">0%</strong>
+                             <div class="confidence-bar overall"><div class="confidence-fill" id="overall-confidence-bar" style="width: 0%;"></div></div>
+                         </div>
+                     </div>
+                </div>
+
+                 <div class="recent-history">
+                     <h4><i class="ri-history-line"></i> Histórico Recente (Simulado)</h4>
+                     <ul id="status-history-list">
+                         <li class="placeholder">Sem histórico ainda. Pressione "Atualizar Status".</li>
+                     </ul>
+                </div>
+            </main>
+            <footer class="modal__footer">
+                <button class="button button--primary" data-modal-close>Entendido</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal: Rotas Otimizadas Aprimorado -->
+    <div class="modal" id="modal-rotas" aria-hidden="true" aria-labelledby="modal-rotas-title">
+        <div class="modal__overlay" tabindex="-1" data-modal-close></div>
+        <div class="modal__container modal--large" role="dialog" aria-modal="true">
+            <header class="modal__header">
+                <h2 class="modal__title" id="modal-rotas-title"><i class="ri-route-fill"></i> Planeador de Rota Inteligente</h2>
+                <button class="modal__close" aria-label="Fechar modal" data-modal-close><i class="ri-close-line"></i></button>
+            </header>
+            <main class="modal__content scrollable-content">
+                <p>Simulação de planeamento de rota para o <strong>ATM selecionado</strong> (<span id="route-target-atm-name">ATM Indefinido</span>).</p>
+
+                <div class="route-planning-grid">
+                    <div class="route-options-details">
+                        <h4><i class="ri-gps-line"></i> Opções de Transporte:</h4>
+                        <div class="route-options" id="route-options-selector">
+                             <div class="route-option-card selectable-card selected" data-route-type="walk" data-time="5 min" data-distance="300m" data-cost="0" data-safety="Alta" data-traffic="Leve" data-img="img/routa.png">
+                                <i class="ri-walk-line"></i> <span>A Pé</span> <small>~ 5 min</small>
+                            </div>
+                             <div class="route-option-card selectable-card" data-route-type="car" data-time="2 min" data-distance="450m" data-cost="50 Kz" data-safety="Média" data-traffic="Moderado" data-img="img/routa0.png">
+                                <i class="ri-car-line"></i> <span>De Carro</span> <small>~ 2 min</small>
+                             </div>
+                             <div class="route-option-card selectable-card" data-route-type="bike" data-time="3 min" data-distance="350m" data-cost="0" data-safety="Alta" data-traffic="Leve" data-img="img/routa1.png">
+                                <i class="ri-bike-line"></i> <span>Bicicleta</span> <small>~ 3 min</small>
+                             </div>
+                             <div class="route-option-card selectable-card" data-route-type="taxi" data-time="3-7 min" data-distance="450m" data-cost="1500 Kz" data-safety="Média" data-traffic="Moderado" data-img="img/routa2.png">
+                                <i class="ri-taxi-line"></i> <span>TVDE</span> <small>~ 5 min</small>
+                             </div>
+                        </div>
+
+                        <div class="route-summary" id="route-summary-details">
+                            <h4><i class="ri-information-line"></i> Detalhes da Rota (A Pé):</h4>
+                            <ul>
+                                <li><i class="ri-pin-distance-line"></i> Distância: <strong id="route-distance">~300m</strong></li>
+                                <li><i class="ri-time-line"></i> Tempo Estimado: <strong id="route-time">~5 min</strong></li>
+                                <li><i class="ri-money-dollar-circle-line"></i> Custo Estimado: <strong id="route-cost">Grátis</strong></li>
+                                <li><i class="ri-shield-star-line"></i> Segurança (Estimada): <strong id="route-safety">Alta</strong> <span class="safety-indicator safe"></span></li>
+                                <li><i class="ri-traffic-light-line"></i> Trânsito Atual: <strong id="route-traffic">Leve</strong></li>
+                            </ul>
+                        </div>
+                        <div class="alternative-routes">
+                             <button class="button button--flex button--small button--ghost" id="btn-alt-route">
+                                 <i class="ri-shuffle-line"></i> Ver Rota Alternativa <span class="spinner"></span>
+                             </button>
+                             <div class="action-feedback" id="alt-route-feedback"></div>
+                        </div>
+                    </div>
+
+                    <div class="route-map-preview">
+                        <h4><i class="ri-road-map-line"></i> Pré-visualização da Rota:</h4>
+                         <div class="map-route-placeholder" id="map-route-visual">
+                             <img src="img/routa1.png" alt="Prévia da rota a pé" id="route-preview-img"> <!-- Imagem Default -->
+                        </div>
+                        <div class="action-feedback" id="route-preview-feedback"></div>
+                    </div>
+                </div>
+
+                <div class="share-section">
+                    <h4><i class="ri-share-forward-line"></i> Compartilhar Direções (Simulado)</h4>
+                     <div class="simulated-button-group" id="share-buttons">
+                        <button class="button button--flex button--small button--ghost" data-share="whatsapp">
+                            <i class="ri-whatsapp-line"></i> WhatsApp <span class="spinner"></span>
+                        </button>
+                         <button class="button button--flex button--small button--ghost" data-share="copy"><i class="ri-clipboard-line"></i> Copiar Link <span class="spinner"></span></button>
+                         <button class="button button--flex button--small button--ghost" data-share="native"><i class="ri-share-line"></i> Mais Opções <span class="spinner"></span></button>
+                     </div>
+                      <div class="action-feedback" id="share-feedback"></div>
+                </div>
+            </main>
+            <footer class="modal__footer">
+                <button class="button button--ghost" data-modal-close>Cancelar</button>
+                <button class="button button--flex button--primary" id="btn-start-navigation">
+                    <span class="button__text">Iniciar Navegação (Sim.)</span>
+                    <i class="ri-navigation-fill button__icon"></i>
+                    <span class="spinner"></span>
+                </button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal: Filtros Avançados Aprimorado -->
+    <div class="modal" id="modal-filtros" aria-hidden="true" aria-labelledby="modal-filtros-title">
+        <div class="modal__overlay" tabindex="-1" data-modal-close></div>
+        <div class="modal__container modal--large" role="dialog" aria-modal="true">
+            <header class="modal__header">
+                <h2 class="modal__title" id="modal-filtros-title"><i class="ri-filter-fill"></i> Filtros Avançados e Preferências</h2>
+                <button class="modal__close" aria-label="Fechar modal" data-modal-close><i class="ri-close-line"></i></button>
+            </header>
+            <main class="modal__content scrollable-content" id="filters-content">
+                <p>Refine sua busca para encontrar o ATM perfeito para suas necessidades.</p>
+                <div class="filters-grid">
+                    <div class="filter-column">
+                        <div class="filter-group">
+                            <h5><i class="ri-bank-line"></i> Bancos</h5>
+                            <div class="filter-options bank-filters checkbox-group">
+                                <label><input type="checkbox" name="bank" value="BAI"><span>BAI</span></label>
+                                <label><input type="checkbox" name="bank" value="BFA"><span>BFA</span></label>
+                                <label><input type="checkbox" name="bank" value="BIC"><span>BIC</span></label>
+                                <label><input type="checkbox" name="bank" value="SB"><span>Standard Bank</span></label>
+                                <label><input type="checkbox" name="bank" value="BNI"><span>BNI</span></label>
+                                <label><input type="checkbox" name="bank" value="MA"><span>Millennium Atlântico</span></label>
+                                <label><input type="checkbox" name="bank" value="BPC"><span>BPC</span></label>
+                                <label><input type="checkbox" name="bank" value="all"><span><i class="ri-check-double-line"></i> Todos</span></label>
+                            </div>
+                        </div>
+                         <div class="filter-group">
+                            <h5><i class="ri-wallet-3-line"></i> Serviços Essenciais</h5>
+                             <div class="filter-options service-filters checkbox-group">
+                                <label><input type="checkbox" name="service" value="levantamentos" id="filter-service-levantamentos" checked><span>Levantamentos</span></label>
+                                <label><input type="checkbox" name="service" value="depositos"><span>Depósitos</span></label>
+                                <label><input type="checkbox" name="service" value="pagamentos"><span>Pagamentos</span></label>
+                                 <label><input type="checkbox" name="service" value="consultas"><span>Consultas</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-column">
+                        <div class="filter-group">
+                            <h5><i class="ri-money-dollar-box-line"></i> Notas Disponíveis (Reportadas)</h5>
+                            <div class="filter-options note-filters checkbox-group">
+                                <label><input type="checkbox" name="note" value="1000"><span>1000 Kz</span></label>
+                                <label><input type="checkbox" name="note" value="2000"><span>2000 Kz</span></label>
+                                <label><input type="checkbox" name="note" value="5000"><span>5000 Kz</span></label>
+                                <label><input type="checkbox" name="note" value="any"><span>Qualquer</span></label>
+                            </div>
+                        </div>
+                         <div class="filter-group">
+                             <h5><i class="ri-map-pin-user-line"></i> Acessibilidade & Localização</h5>
+                             <div class="filter-options accessibility-filters checkbox-group">
+                                 <label><input type="checkbox" name="access" value="cadeirante"><span><i class="ri-wheelchair-line"></i> Acessível</span></label>
+                                 <label><input type="checkbox" name="access" value="externo24h"><span><i class="ri-24-hours-line"></i> Externo 24h</span></label>
+                                 <label><input type="checkbox" name="access" value="estacionamento"><span><i class="ri-parking-box-line"></i> Estac. Próximo</span></label>
+                             </div>
+                        </div>
+                        <div class="filter-group">
+                            <h5><i class="ri-radar-line"></i> Raio de Busca (Simulação)</h5>
+                            <div class="range-slider">
+                                 <input type="range" id="filter-radius" name="radius" min="100" max="5000" value="1500" step="100">
+                                 <span id="radius-value" class="range-value-display">1.5 km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-actions">
+                     <span class="filter-results-count">
+                         <i class="ri-map-pin-check-line"></i> <strong id="filter-count">85</strong> ATMs correspondentes (Simulado)
+                     </span>
+                     <div class="filter-buttons-group">
+                         <button class="button button--flex button--small button--ghost" id="btn-save-filters" title="Salvar combinação de filtros atual">
+                              <i class="ri-save-line"></i> Salvar <span class="spinner"></span>
+                         </button>
+                         <button class="button button--flex button--small button--ghost" id="btn-clear-filters" disabled>
+                             <i class="ri-refresh-line"></i> Limpar
+                         </button>
+                         <button class="button button--flex button--small button--primary" id="btn-apply-filters" disabled>
+                             <span class="button__text">Aplicar Filtros</span>
+                             <i class="ri-check-double-line button__icon"></i>
+                             <span class="spinner"></span>
+                         </button>
+                    </div>
+                </div>
+                 <div class="action-feedback" id="filter-apply-feedback"></div>
+            </main>
+             <footer class="modal__footer">
+                <button class="button button--ghost" data-modal-close>Cancelar</button>
+                <button class="button button--primary" id="btn-view-map-filtered" data-modal-close>
+                    Ver Mapa Filtrado (Sim.)
+                </button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal: Simulador de Economia Aprimorado -->
+    <div class="modal" id="modal-economia" aria-hidden="true" aria-labelledby="modal-economia-title">
+        <div class="modal__overlay" tabindex="-1" data-modal-close></div>
+        <div class="modal__container modal--large" role="dialog" aria-modal="true">
+            <header class="modal__header">
+                <h2 class="modal__title" id="modal-economia-title"><i class="ri-line-chart-fill"></i> Simulador de Economia: ATM vs. Informal</h2>
+                <button class="modal__close" aria-label="Fechar modal" data-modal-close><i class="ri-close-line"></i></button>
+            </header>
+            <main class="modal__content scrollable-content">
+                 <p>Veja o impacto real das taxas informais e quanto você poupa usando ATMs com o <strong class="highlight">ATM na Mão</strong>.</p>
+                 <div class="economy-simulator">
+                     <div class="simulator-controls">
+                         <div class="form-group">
+                            <label for="withdrawal-amount">Valor a Levantar (Kz):</label>
+                            <input type="number" id="withdrawal-amount" value="50000" min="1000" max="200000" step="1000" class="form-control">
+                         </div>
+                         <div class="form-group">
+                            <label for="informal-fee-percent">Taxa Informal Média (%):</label>
+                             <div class="slider-with-value">
+                                <input type="range" id="informal-fee-percent" min="5" max="30" value="15" step="1" class="form-range">
+                                <span id="informal-fee-value" class="range-value-display">15%</span>
+                             </div>
+                         </div>
+                     </div>
+
+                     <div class="economy-comparison-dynamic">
+                         <div class="economy-card dynamic-card official-card">
+                             <i class="ri-bank-card-2-line large-icon success-color"></i>
+                            <h4>Custo Via ATM na Mão</h4>
+                            <p class="comparison-value" id="official-total-cost">50.000 Kz</p>
+                            <small class="success-color">(Sem taxas extras de levantamento)</small>
+                            <hr>
+                            <div class="benefit-list">
+                                <span><i class="ri-shield-check-line"></i> Seguro</span>
+                                <span><i class="ri-timer-line"></i> Rápido (com o app)</span>
+                                <span><i class="ri-wallet-line"></i> Sem taxas ocultas</span>
+                            </div>
+                         </div>
+                         <div class="economy-card dynamic-card informal-card">
+                            <i class="ri-hand-coin-line large-icon error-color"></i>
+                            <h4>Custo Via Informal</h4>
+                            <p class="comparison-value" id="informal-total-cost">57.500 Kz</p>
+                            <small class="error-color">(Valor + Taxa de <span id="informal-fee-amount">7.500 Kz</span>)</small>
+                            <hr>
+                            <div class="risk-list">
+                                <span><i class="ri-error-warning-line"></i> Risco de fraude</span>
+                                <span><i class="ri-time-line"></i> Tempo incerto</span>
+                                <span><i class="ri-money-dollar-circle-line"></i> Taxas altas</span>
+                            </div>
+                         </div>
+                     </div>
+
+                     <div class="savings-highlight dynamic-savings">
+                         <i class="ri-sparkling-2-fill"></i> Economia Imediata com ATM na Mão: <strong id="instant-savings">7.500 Kz</strong>
+                         <p>Esse valor poderia pagar seu transporte, um lanche ou ir para sua poupança!</p>
+                     </div>
+                 </div>
+
+                 <div class="cumulative-savings">
+                    <h4><i class="ri-calendar-check-line"></i> Sua Economia Estimada (Este Mês - Simulação)</h4>
+                    <p>Ao escolher ATMs via app, você já poupou aproximadamente:</p>
+                    <strong class="cumulative-value" id="monthly-savings">42.500 Kz</strong>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="monthly-savings-progress" style="width: 65%;"></div>
+                    </div>
+                    <small>Baseado nos seus levantamentos registrados no app.</small>
+                 </div>
+
+                 <div class="security-link" data-modal-target="#modal-vantagem-seguranca" role="button" tabindex="0">
+                     <i class="ri-shield-check-line"></i> Lembre-se: usar ATMs oficiais é também <strong>muito mais seguro</strong>. Clique para saber mais sobre os riscos do mercado informal.
+                 </div>
+            </main>
+            <footer class="modal__footer">
+                <button class="button button--primary" data-modal-close>Entendido, Vou Poupar!</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal: Rede Colaborativa Aprimorado -->
+    <div class="modal" id="modal-colaborativa" aria-hidden="true" aria-labelledby="modal-colaborativa-title">
+        <div class="modal__overlay" tabindex="-1" data-modal-close></div>
+        <div class="modal__container modal--large" role="dialog" aria-modal="true">
+            <header class="modal__header">
+                <h2 class="modal__title" id="modal-colaborativa-title"><i class="ri-copper-diamond-fill"></i> Comunidade ATM na Mão: Contribua e Ganhe!</h2>
+                <button class="modal__close" aria-label="Fechar modal" data-modal-close><i class="ri-close-line"></i></button>
+            </header>
+            <main class="modal__content scrollable-content">
+                <p>Sua participação fortalece a rede! Reporte o status de um ATM <strong id="collab-atm-name">(ATM Exemplo)</strong> e ajude milhares de usuários.</p>
+                <div class="collaboration-grid">
+                     <div class="report-actions-column">
+                         <h4><i class="ri-feedback-line"></i> Reportar Status Agora (Simulação):</h4>
+                         <p>Acabou de usar ou verificar este ATM? Como estava?</p>
+                         <div class="report-buttons-group">
+                             <button class="button button--success report-button" data-status="available" data-points="5">
+                                 <i class="ri-thumb-up-line button__icon"></i> Tinha Dinheiro <span class="spinner"></span>
+                             </button>
+                             <button class="button button--danger report-button" data-status="unavailable" data-points="3">
+                                 <i class="ri-thumb-down-line button__icon"></i> Sem Dinheiro <span class="spinner"></span>
+                              </button>
+                             <button class="button button--warning report-button" data-status="issue" data-points="2">
+                                 <i class="ri-alert-line button__icon"></i> Outro Problema <span class="spinner"></span>
+                              </button>
+                         </div>
+                         <div class="action-feedback" id="report-feedback-collab"></div>
+                         <div class="other-issue-report" id="other-issue-section" style="display: none;">
+                             <label for="issue-description">Descreva o problema (opcional):</label>
+                             <textarea id="issue-description" rows="2" placeholder="Ex: Tela não responde, muito lento, notas presas..." class="form-control"></textarea>
+                             <button class="button button--small button--primary" id="btn-submit-issue">
+                                <i class="ri-send-plane-line"></i> Enviar Descrição <span class="spinner"></span>
+                             </button>
+                         </div>
+                         <small class="report-note">Seu reporte atualiza o mapa para todos!</small>
+                     </div>
+
+                     <div class="gamification-column">
+                         <h4><i class="ri-trophy-line"></i> Seu Progresso de Colaborador:</h4>
+                         <div class="user-stats">
+                             <div class="stat-item">
+                                 <span class="stat-value" id="collab-score">125</span>
+                                 <span class="stat-label">Pontos</span>
+                             </div>
+                              <div class="stat-item">
+                                 <span class="stat-value" id="collab-reports">15</span>
+                                 <span class="stat-label">Reportes</span>
+                             </div>
+                             <div class="stat-item">
+                                  <span class="stat-value badge-icon" id="collab-badge-icon"><i class="ri-copper-coin-line"></i></span>
+                                 <span class="stat-label" id="collab-badge-name">Bronze</span>
+                             </div>
+                         </div>
+                         <div class="next-badge-progress">
+                             <small>Próximo Nível: Colaborador Prata (250 Pontos)</small>
+                             <div class="progress-bar"><div class="progress-fill" id="badge-progress-bar" style="width: 50%;"></div></div>
+                         </div>
+
+                         <div class="recent-activity-feed">
+                             <h5><i class="ri-history-fill"></i> Sua Atividade Recente (Simulada):</h5>
+                             <ul id="user-activity-list">
+                                 <li><i class="ri-thumb-up-line success-color"></i> Reportou "Com Dinheiro" - ATM BAI Alvalade (+5 pts)</li>
+                                 <li><i class="ri-thumb-down-line error-color"></i> Reportou "Sem Dinheiro" - ATM BFA Sagrada (+3 pts)</li>
+                                 <li><i class="ri-alert-line warning-color"></i> Reportou "Problema" - ATM BIC Vila Alice (+2 pts)</li>
+                             </ul>
+                              <button class="button button--link button--small" id="btn-view-history">Ver todo o histórico</button>
+                         </div>
+                         <div class="leaderboard-cta">
+                            <i class="ri-bar-chart-grouped-line"></i> Veja sua posição no Ranking de Colaboradores! (Em breve)
+                         </div>
+                     </div>
+                </div>
+            </main>
+            <footer class="modal__footer">
+                 <button class="button button--ghost" data-modal-close>Fechar</button>
+                 <button class="button button--secondary" disabled>Ver Leaderboard (Em breve)</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- =========== NOVO MODAL: SIMULAÇÃO SAQUE ====== -->
+    <!-- ============================================== -->
+    <div class="modal" id="modal-saque-simulado" aria-hidden="true" aria-labelledby="modal-saque-simulado-title">
+        <div class="modal__overlay" tabindex="-1" data-modal-close></div>
+        <div class="modal__container modal--xlarge" role="dialog" aria-modal="true">
+            <header class="modal__header">
+                <h2 class="modal__title" id="modal-saque-simulado-title"><i class="ri-exchange-funds-line"></i> Simulação de Saque: Formal vs. Informal</h2>
+                <button class="modal__close" aria-label="Fechar modal" data-modal-close><i class="ri-close-line"></i></button>
+            </header>
+            <main class="modal__content scrollable-content">
+                 <p>Compare o processo, custos e riscos de levantar dinheiro usando o <strong>ATM na Mão</strong> versus o método informal.</p>
+
+                <div class="simulation-setup">
+                    <label for="sim-withdrawal-amount">Valor a Levantar (Simulação):</label>
+                    <input type="number" id="sim-withdrawal-amount" value="20000" min="5000" max="100000" step="5000" class="form-control small-input">
+                     <button class="button button--small button--primary" id="btn-start-sim">Iniciar Comparação</button>
+                     <div class="action-feedback" id="sim-start-feedback"></div>
+                </div>
+
+                <div class="saque-comparison-grid">
+                    <!-- Coluna Saque Formal -->
+                    <div class="saque-method-column saque-formal">
+                        <h3 class="method-title"><i class="ri-bank-card-2-line success-color"></i> Saque Formal (Com ATM na Mão)</h3>
+                        <ol class="step-list" id="formal-steps">
+                            <li data-step="1" class="step-item pending">
+                                <i class="ri-smartphone-line step-icon"></i>
+                                <div class="step-content">
+                                    <strong>Abrir App:</strong> Encontrar ATM com dinheiro confirmado perto de si.
+                                    <small class="step-time-est">~ 1 min</small>
+                                </div>
+                                <span class="step-status"><i class="ri-loader-4-line animate-spin"></i></span>
+                            </li>
+                             <li data-step="2" class="step-item pending">
+                                <i class="ri-route-line step-icon"></i>
+                                <div class="step-content">
+                                    <strong>Navegar:</strong> Seguir a rota mais rápida e segura até o ATM.
+                                     <small class="step-time-est">~ 5 min (variável)</small>
+                                </div>
+                                 <span class="step-status"><i class="ri-time-line"></i></span>
+                            </li>
+                            <li data-step="3" class="step-item pending">
+                                <i class="ri-fingerprint-line step-icon"></i>
+                                <div class="step-content">
+                                    <strong>Levantar:</strong> Usar seu cartão Multicaixa no ATM seguro.
+                                    <small class="step-time-est">~ 2 min</small>
+                                </div>
+                                <span class="step-status"><i class="ri-time-line"></i></span>
+                            </li>
+                            <li data-step="4" class="step-item pending">
+                                <i class="ri-money-dollar-circle-line step-icon"></i>
+                                <div class="step-content">
+                                    <strong>Receber Valor Exato:</strong> Obter <strong class="sim-amount">20.000 Kz</strong> sem taxas adicionais.
+                                </div>
+                                <span class="step-status"><i class="ri-time-line"></i></span>
+                            </li>
+                             <li data-step="5" class="step-item pending">
+                                <i class="ri-feedback-line step-icon"></i>
+                                <div class="step-content">
+                                    <strong>(Opcional) Reportar:</strong> Confirmar o status no app e ganhar pontos.
+                                    <small class="step-time-est">~ 30 seg</small>
+                                </div>
+                                 <span class="step-status"><i class="ri-time-line"></i></span>
+                            </li>
+                        </ol>
+                        <div class="method-summary formal-summary">
+                            <h4>Resumo Formal:</h4>
+                            <p><i class="ri-check-line success-color"></i> <strong>Custo:</strong> <strong class="sim-amount">20.000 Kz</strong> (Taxa: 0 Kz)</p>
+                            <p><i class="ri-shield-check-line success-color"></i> <strong>Segurança:</strong> Alta</p>
+                            <p><i class="ri-timer-line"></i> <strong>Tempo Total (Est.):</strong> <span id="formal-time">~ 8-10 min</span></p>
+                             <p><i class="ri-file-list-3-line"></i> <strong>Transação Registrada</strong></p>
+                        </div>
+                    </div>
+
+                     <!-- Coluna Saque Informal -->
+                    <div class="saque-method-column saque-informal">
+                         <h3 class="method-title"><i class="ri-hand-coin-line error-color"></i> Saque Informal (Rua)</h3>
+                         <ol class="step-list" id="informal-steps">
+                            <li data-step="1" class="step-item pending">
+                                <i class="ri-walk-line step-icon"></i>
+                                <div class="step-content">
+                                    <strong>Procurar Alguém:</strong> Encontrar um "agente" informal disponível.
+                                     <small class="step-time-est">~ 5-15 min (incerto)</small>
+                                </div>
+                                 <span class="step-status"><i class="ri-loader-4-line animate-spin"></i></span>
+                            </li>
+                             <li data-step="2" class="step-item pending">
+                                <i class="ri-discuss-line step-icon"></i>
+                                <div class="step-content">
+                                    <strong>Negociar Taxa:</strong> Acordar a comissão (Ex: 15% = <strong class="sim-fee">3.000 Kz</strong>).
+                                     <small class="step-time-est">~ 2 min</small>
+                                </div>
+                                 <span class="step-status"><i class="ri-time-line"></i></span>
+                            </li>
+                             <li data-step="3" class="step-item pending risk-step">
+                                <i class="ri-error-warning-fill step-icon error-color"></i>
+                                <div class="step-content">
+                                    <strong>Entregar Cartão/PIN:</strong> Confiar seus dados a um estranho. <strong class="error-color">RISCO ALTO!</strong>
+                                    <small class="step-time-est">~ 1 min</small>
+                                </div>
+                                 <span class="step-status"><i class="ri-time-line"></i></span>
+                            </li>
+                            <li data-step="4" class="step-item pending">
+                                <i class="ri-time-line step-icon"></i>
+                                <div class="step-content">
+                                    <strong>Aguardar:</strong> Esperar que o "agente" vá ao ATM (se houver dinheiro).
+                                    <small class="step-time-est">~ 5-20 min (variável)</small>
+                                </div>
+                                 <span class="step-status"><i class="ri-time-line"></i></span>
+                            </li>
+                             <li data-step="5" class="step-item pending">
+                                <i class="ri-money-dollar-circle-line step-icon"></i>
+                                <div class="step-content">
+                                    <strong>Receber Dinheiro:</strong> Obter <strong class="sim-amount">20.000 Kz</strong> (se tudo correr bem). Pagar a taxa.
+                                </div>
+                                 <span class="step-status"><i class="ri-time-line"></i></span>
+                            </li>
+                        </ol>
+                        <div class="method-summary informal-summary">
+                            <h4>Resumo Informal:</h4>
+                            <p><i class="ri-close-line error-color"></i> <strong>Custo:</strong> <strong id="informal-total-cost-sim">23.000 Kz</strong> (Taxa: <strong class="sim-fee">3.000 Kz</strong>)</p>
+                            <p><i class="ri-shield-cross-line error-color"></i> <strong>Segurança:</strong> Baixa (Risco de fraude, roubo, clonagem)</p>
+                            <p><i class="ri-time-line"></i> <strong>Tempo Total (Est.):</strong> <span id="informal-time">~ 15-40 min</span> (Incerto)</p>
+                            <p><i class="ri-eye-off-line"></i> <strong>Sem Registro / Privacidade</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="simulation-conclusion">
+                    <h4>Conclusão da Simulação</h4>
+                    <p>Com o <strong>ATM na Mão</strong>, o saque formal é <strong>mais barato</strong> (<span class="savings-highlight-sim">economiza <strong class="sim-fee">3.000 Kz</strong> neste exemplo</span>), <strong>mais rápido</strong> (em média) e, crucialmente, <strong>muito mais seguro</strong>.</p>
+                    <p>Evite riscos e taxas desnecessárias. Use a tecnologia a seu favor!</p>
+                     <div class="modal-cta-buttons">
+                         <button class="button button--secondary button--flex" data-modal-target="#modal-economia">
+                             <i class="ri-line-chart-line"></i> Ver Simulador de Economia
+                         </button>
+                         <button class="button button--primary button--flex" data-modal-close>
+                             <i class="ri-thumb-up-line"></i> Entendi a Vantagem!
+                         </button>
+                     </div>
+                </div>
+            </main>
+             <footer class="modal__footer">
+                 <button class="button button--ghost" id="btn-reset-sim">Reiniciar Simulação</button>
+                 <button class="button button--primary" data-modal-close>Fechar Simulação</button>
+            </footer>
+        </div>
+    </div>
+
+
+     <!-- Modals de VANTAGENS (Mantidos, mas com pequenas melhorias de texto/icons se necessário) -->
+     <div class="modal" id="modal-vantagem-tempo" aria-hidden="true" aria-labelledby="modal-vantagem-tempo-title">
+         <div class="modal__overlay" tabindex="-1" data-modal-close></div>
+         <div class="modal__container" role="dialog" aria-modal="true">
+             <header class="modal__header"><h2 class="modal__title" id="modal-vantagem-tempo-title"><i class="ri-timer-flash-line"></i> Vantagem: Tempo é Dinheiro</h2><button class="modal__close" aria-label="Fechar modal" data-modal-close><i class="ri-close-line"></i></button></header>
+             <main class="modal__content">
+                 <p>Quantas vezes você já rodou pela cidade, gastando combustível e paciência, à procura de um ATM com dinheiro?</p>
+                 <div class="modal-vantagem__visual comparison">
+                     <div class="comparison__item before"><i class="ri-map-line comparison__icon"></i><h4>Antes: Busca Incerta</h4><ul><li><i class="ri-gas-station-line"></i> Gasto de combustível/transporte</li><li><i class="ri-emotion-unhappy-line"></i> Frustração e stress</li><li><i class="ri-time-line"></i> Tempo perdido (até horas)</li></ul></div>
+                     <div class="comparison__item after"><i class="ri-route-fill comparison__icon"></i><h4>Com ATM na Mão: Rota Direta</h4><ul><li><i class="ri-map-pin-check-line"></i> Localização precisa</li><li><i class="ri-navigation-line"></i> Rota otimizada</li><li><i class="ri-emotion-happy-line"></i> Tranquilidade e rapidez</li></ul></div>
+                 </div>
+                 <p>Com o ATM na Mão, você vai direto ao que tem dinheiro confirmado pela comunidade e IA. <strong>Seu tempo vale mais!</strong></p>
+             </main>
+             <footer class="modal__footer"><button class="button button--primary" data-modal-close>Entendido</button></footer>
+         </div>
+     </div>
+     <div class="modal" id="modal-vantagem-economia" aria-hidden="true" aria-labelledby="modal-vantagem-economia-title">
+         <div class="modal__overlay" tabindex="-1" data-modal-close></div>
+         <div class="modal__container" role="dialog" aria-modal="true">
+             <header class="modal__header"><h2 class="modal__title" id="modal-vantagem-economia-title"><i class="ri-money-dollar-box-line"></i> Vantagem: Economia Real</h2><button class="modal__close" aria-label="Fechar modal" data-modal-close><i class="ri-close-line"></i></button></header>
+             <main class="modal__content">
+                 <p>O mercado informal cobra taxas que podem chegar a <strong>10%, 15% ou mais</strong> do valor levantado. Isso é dinheiro seu indo embora!</p>
+                 <div class="modal-vantagem__visual economy-comparison">
+                     <div class="economy-card informal"><h4>Levantamento Informal (Ex.)</h4><span class="economy-value">50.000 Kz</span><span class="economy-fee">- 7.500 Kz <small>(Taxa 15% Ex.)</small></span><hr><span class="economy-total-cost">Custo Real: 57.500 Kz</span><i class="ri-hand-coin-line economy-icon"></i></div>
+                     <div class="economy-card official"><h4>Levantamento ATM (App)</h4><span class="economy-value">50.000 Kz</span><span class="economy-fee success-color">+ 0 Kz <small>(Sem Taxa Extra)</small></span><hr><span class="economy-total-cost">Custo Real: 50.000 Kz</span><i class="ri-bank-card-2-line economy-icon"></i></div>
+                 </div>
+                 <p class="savings-highlight">Neste Exemplo, Economia Direta: <strong>7.500 Kz!</strong></p>
+                 <p>Usando o ATM na Mão para encontrar caixas oficiais, você acessa seu dinheiro <strong>sem pagar comissões abusivas</strong>. <a href="#" data-modal-target="#modal-economia" class="modal-link">Use nosso simulador para ver sua economia!</a></p>
+             </main>
+             <footer class="modal__footer"><button class="button button--primary" data-modal-close>Entendido</button></footer>
+         </div>
+     </div>
+     <div class="modal" id="modal-vantagem-seguranca" aria-hidden="true" aria-labelledby="modal-vantagem-seguranca-title">
+          <div class="modal__overlay" tabindex="-1" data-modal-close></div>
+         <div class="modal__container" role="dialog" aria-modal="true">
+             <header class="modal__header"><h2 class="modal__title" id="modal-vantagem-seguranca-title"><i class="ri-shield-check-line"></i> Vantagem: Segurança Reforçada</h2><button class="modal__close" aria-label="Fechar modal" data-modal-close><i class="ri-close-line"></i></button></header>
+             <main class="modal__content">
+                 <p>Realizar transações financeiras na rua ou com desconhecidos expõe você a diversos riscos graves e desnecessários.</p>
+                 <div class="modal-vantagem__visual safety-points">
+                     <div class="safety-point risk"><i class="ri-user-unfollow-line safety-icon"></i><h4>Riscos Informais</h4><ul><li><i class="ri-error-warning-line"></i> Assaltos e coação</li><li><i class="ri-money-dollar-circle-line"></i> Notas Falsas</li><li><i class="ri-eye-off-line"></i> Falta de Privacidade</li><li><i class="ri-fingerprint-2-line"></i> Clonagem de Cartão / Roubo de PIN</li></ul></div>
+                     <div class="safety-point safe"><i class="ri-shield-star-line safety-icon"></i><h4>Segurança do ATM</h4><ul><li><i class="ri-camera-line"></i> Vigilância por Câmera</li><li><i class="ri-building-4-line"></i> Ambiente Controlado (Bancos, Lojas)</li><li><i class="ri-lock-password-line"></i> Transação Segura e Registrada</li><li><i class="ri-shield-keyhole-line"></i> Proteção dos seus dados</li></ul></div>
+                 </div>
+                 <p>O ATM na Mão direciona você para <strong>canais oficiais e seguros</strong>, minimizando drasticamente esses riscos. <strong>Proteja-se! Sua segurança não tem preço.</strong></p>
+             </main>
+             <footer class="modal__footer"><button class="button button--primary" data-modal-close>Entendido</button></footer>
+         </div>
+     </div>
+      <div class="modal" id="modal-vantagem-conveniencia" aria-hidden="true" aria-labelledby="modal-vantagem-conveniencia-title">
+           <div class="modal__overlay" tabindex="-1" data-modal-close></div>
+         <div class="modal__container" role="dialog" aria-modal="true">
+             <header class="modal__header"><h2 class="modal__title" id="modal-vantagem-conveniencia-title"><i class="ri-thumb-up-line"></i> Vantagem: Conveniência Total</h2><button class="modal__close" aria-label="Fechar modal" data-modal-close><i class="ri-close-line"></i></button></header>
+             <main class="modal__content">
+                 <p>Ter a informação certa, na hora certa, diretamente no seu bolso, simplifica sua vida financeira.</p>
+                 <div class="modal-vantagem__visual convenience-features">
+                     <div class="feature-highlight"><i class="ri-smartphone-line feature-icon"></i><div><h4>Tudo no seu Bolso</h4><p>Mapas, status, filtros, rotas e histórico no seu celular.</p></div></div>
+                     <div class="feature-highlight"><i class="ri-24-hours-line feature-icon"></i><div><h4>Disponível 24/7</h4><p>Consulte o app a qualquer hora, em qualquer lugar, antes de sair.</p></div></div>
+                     <div class="feature-highlight"><i class="ri-user-location-line feature-icon"></i><div><h4>Sempre Perto</h4><p>Encontre o ATM funcional mais próximo da sua localização atual.</p></div></div>
+                     <div class="feature-highlight"><i class="ri-filter-3-line feature-icon"></i><div><h4>Busca Personalizada</h4><p>Filtre por banco, acessibilidade, serviços ou notas desejadas.</p></div></div>
+                 </div>
+                 <p>O ATM na Mão coloca o controle e a informação necessária na palma da sua mão, tornando a busca por dinheiro <strong>simples, rápida e eficiente</strong>.</p>
+             </main>
+             <footer class="modal__footer"><button class="button button--primary" data-modal-close>Entendido</button></footer>
+         </div>
+     </div>
+    <!-- ===== FIM MODALS ===== -->
+
+    <!-- ===== SCROLL UP ===== -->
+    <a href="#" class="scrollup" id="scroll-up" aria-label="Voltar ao topo">
+        <i class="ri-arrow-up-s-line"></i>
+    </a>
+
+    <!-- ===== SCRIPTS ===== -->
+    <!-- jQuery (Necessário para Slick Slider) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Slick Slider JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Main JS (Seu script.js existente) -->
+    <script src="script.js"></script>
+    <script src="modals_script.js"></script> <!-- CORRIGIDO -->
+    <!-- Novo JS para Modais Aprimorados (Coloque o conteúdo do JS abaixo aqui ou no seu script.js) -->
+    <!-- <script src="modals_script.js"></script> --> <!-- Ou adicione o código JS diretamente -->
+
+</body>
+</html>
