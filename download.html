@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download ATM na Mão | O Futuro do Acesso a Dinheiro</title>
+    <meta name="description" content="Baixe a versão mais recente do ATM na Mão para iOS & Android. Acesso inteligente e seguro a ATMs com dinheiro em Luanda. Instale já!">
+    <meta name="keywords" content="Download ATM na Mão, baixar app, aplicativo ATM, iOS, Android, APK, IPA, Luanda, Angola, dinheiro, Multicaixa, futuro, tecnologia, download seguro">
+
+    <link rel="shortcut icon" href="img/2.png" type="image/png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <!-- Slick CSS (Slider) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+    <!-- === MAIN CSS (SHARED WITH INDEX.HTML) === -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="preload"> <!-- Manter preloader -->
+
+ <!-- ===== PRELOADER ===== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__content">
+            <img src="img/ico.png" alt="ATM na Mão Logo" class="preloader__logo-img animate-pulse" />
+            <div class="preloader__text">Carregando o futuro...</div>
+            <div class="preloader__spinner"></div>
+        </div>
+    </div>
+    <!-- ===== HEADER (SHARED STYLE) ===== -->
+    <header class="header" id="header"> <!-- Usar a classe 'header' unificada -->
+        <nav class="nav container">
+             <div class="nav__left">
+                 <!-- Botão Sidebar removido na pág. download (ou pode manter se quiser acesso rápido) -->
+                 <!-- <button class="nav__sidebar-toggle" id="sidebar-toggle" aria-label="Abrir Transações"><i class="ri-menu-unfold-fill"></i></button> -->
+                <a href="index.html" class="nav__logo" aria-label="Voltar à página inicial ATM na Mão">
+                  <img src="img/2.png" alt="ATM na Mão Logo" class="nav__logo-img">
+                     <span>ATM NA MAO</span>
+                </a>
+             </div>
+            <div class="nav__menu" id="nav-menu">
+                 <ul class="nav__list">
+                     <!-- Links podem apontar para seções DESTA página ou voltar para index.html -->
+                     <li class="nav__item"><a href="#dl-features" class="nav__link">Funções</a></li>
+                     <li class="nav__item"><a href="#dl-benefits" class="nav__link">Benefícios</a></li>
+                     <li class="nav__item"><a href="#dl-cta-final" class="nav__link active-link">Baixar</a></li>
+                     <li class="nav__item"><a href="about.html" class="nav__link">Sobre</a></li> 
+                      <li class="nav__item"><a href="index.html#contact" class="nav__link">Contato</a></li> <!-- Exemplo link externo -->
+                 </ul>
+                 <button class="nav__close" id="nav-close" aria-label="Fechar menu">
+                     <i class="ri-close-line"></i>
+                 </button>
+            </div>
+            <div class="nav__actions">
+                 <!-- Botão principal pode ser redundante se o link Download já está ativo -->
+                 <!-- <a href="#dl-cta-final" class="button button--primary button--small nav__button"><i class="ri-download-cloud-2-line"></i> <span>Download</span></a> -->
+                 <a href="index.html" class="button button--secondary button--small nav__button button--ghost" style="color: white;">
+                    <i class="ri-home-4-line" style="color: white;"></i> <span>Início</span>
+                 </a>
+                <!-- Theme Toggle -->
+                <button class="nav__theme" id="theme-button" aria-label="Mudar tema">
+                    <i class="ri-moon-line nav__theme-icon"></i>
+                </button>
+                 <!-- Menu Toggle (Mobile) -->
+                 <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu">
+                     <i class="ri-menu-4-line"></i>
+                 </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-download"> <!-- Classe específica se necessário para espaçamento -->
+
+        <!-- ===== Hero Section ===== -->
+        <section class="dl-section dl-hero" id="dl-hero">
+             <div class="hero__background-shapes"> <!-- Reutilizando shapes do index -->
+                <div class="shape shape-1 dl-shape-adjust-1"></div>
+                <div class="shape shape-2 dl-shape-adjust-2"></div>
+                <div class="shape shape-3 dl-shape-adjust-3"></div>
+             </div>
+            <div class="container dl-hero__container">
+                <div class="dl-hero__content">
+                    <span class="dl-hero__subtitle" data-animation="fade-in-down">VERSÃO MAIS RECENTE</span>
+                    <h1 class="dl-hero__title" data-animation="fade-in-up">
+                        A tecnologia que Coloca<br><span class="highlight-gradient">o Banco na sua Mão.</span>
+                    </h1>
+                    <p class="dl-hero__description" data-animation="fade-in-up" data-delay="150">
+                        Instale o ATM na Mão e tenha acesso rápido e seguro a caixas eletrônicos com dinheiro em Luanda. Gratuito, inteligente e essencial.
+                    </p>
+                    <div class="dl-hero__buttons" data-animation="fade-in-up" data-delay="300">
+                        <!-- Botões usando a classe .button para estilo unificado -->
+                        <a href="#" class="button button--primary button--flex" aria-label="Download no Google Play" style="color: white;">
+                            <i class="ri-google-play-fill" style="color: white;"></i> Google Play
+                        </a>
+                         <a href="#" class="button button--secondary button--flex" aria-label="Download na App Store" style="color: white;">
+                            <i class="ri-apple-fill" style="color: white;"></i> App Store
+                        </a>
+                        <a href="#" class="button button--ghost button--flex" aria-label="Download APK direto">
+                            <i class="ri-android-fill"></i> Baixar APK
+                        </a>
+                         <a href="#" class="button button--ghost button--flex" aria-label="Download IPA direto (se aplicável)">
+                            <i class="ri-app-store-line"></i> Baixar IPA
+                        </a>
+                    </div>
+                    <div class="dl-hero__trust-signals" data-animation="fade-in-up" data-delay="450">
+                        <span><i class="ri-shield-check-fill"></i> Verificado & Seguro</span>
+                        <span><i class="ri-download-cloud-2-fill"></i> +50 Mil Downloads</span>
+                        <span><i class="ri-star-fill"></i> Avaliação 4.9</span>
+                    </div>
+                </div>
+                <div class="dl-hero__visual" data-animation="zoom-in" data-delay="200">
+                     <div class="dl-mockup-wrapper">
+                         <!-- Usar imagem de telemóvel mais moderna/genérica -->
+                        <img src="img/phone1.png" alt="Mockup de telemóvel exibindo o App ATM na Mão" class="dl-mockup-img"> <!-- SUBSTITUA PELA SUA IMAGEM DE MOCKUP -->
+                        <img src="img/phone.png" alt="Ecrã principal da App ATM na Mão" class="dl-mockup-screen"> <!-- SUBSTITUA PELA SUA SCREENSHOT -->
+
+                        <div class="floating-ui ui-1 pulse"><i class="ri-map-pin-check-fill"></i> 12 ATMs Próximos</div>
+                        <div class="floating-ui ui-2 pulse"><i class="ri-wallet-3-fill"></i> Economia: 5.000 Kz</div>
+                        <div class="floating-ui ui-3 pulse"><i class="ri-user-voice-fill"></i> Reporte Feito!</div>
+                     </div>
+                </div>
+            </div>
+            <a href="#dl-features" class="dl-scroll-down-indicator is-visible" aria-label="Rolar para baixo"> <!-- is-visible para aparecer logo -->
+                <i class="ri-arrow-down-double-line"></i>
+            </a>
+        </section>
+
+        <!-- ===== Features Section ===== -->
+        <section class="dl-section dl-features" id="dl-features">
+            <div class="container">
+                <h2 class="dl-section-title" data-animation="fade-in-up">Tecnologia <span class="highlight">Inteligente</span> ao Seu Dispor</h2>
+                <p class="dl-section-subtitle" data-animation="fade-in-up" data-delay="100">Funcionalidades essenciais para o seu dia-a-dia em Luanda.</p>
+                <div class="dl-features-grid" data-stagger="100">
+                     <!-- Cards usarão o mesmo estilo de .feature__card -->
+                    <div class="feature__card" data-animation="slide-up">
+                        <div class="feature__header">
+                            <div class="feature__icon icon-gradient-1"><i class="ri-map-pin-range-line"></i></div>
+                            <h3 class="feature__title">Radar de ATMs</h3>
+                        </div>
+                        <p class="feature__description">Mapa dinâmico com status de dinheiro e nível de confiança claros.</p>
+                    </div>
+                    <div class="feature__card" data-animation="slide-up">
+                        <div class="feature__header">
+                            <div class="feature__icon icon-gradient-2"><i class="ri-route-fill"></i></div>
+                            <h3 class="feature__title">Navegação Otimizada</h3>
+                        </div>
+                        <p class="feature__description">Rotas integradas, considerando distância, tempo e segurança estimada.</p>
+                    </div>
+                    <div class="feature__card" data-animation="slide-up">
+                        <div class="feature__header">
+                             <div class="feature__icon icon-gradient-3"><i class="ri-filter-3-fill"></i></div>
+                             <h3 class="feature__title">Filtros Avançados</h3>
+                        </div>
+                        <p class="feature__description">Encontre ATMs por banco, serviços, acessibilidade e mais.</p>
+                    </div>
+                    <div class="feature__card" data-animation="slide-up">
+                        <div class="feature__header">
+                             <div class="feature__icon icon-gradient-4"><i class="ri-notification-3-fill"></i></div>
+                             <h3 class="feature__title">Alertas Inteligentes</h3>
+                        </div>
+                        <p class="feature__description">Seja notificado sobre ATMs disponíveis perto de si (opcional).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Showcase Section (Slider Melhorado) ===== -->
+        <section class="dl-section dl-showcase" id="dl-showcase">
+             <div class="dl-background-glow glow-showcase"></div>
+            <div class="container">
+                <h2 class="dl-section-title" data-animation="fade-in-up">Interface <span class="highlight">Moderna</span> e <span class="highlight">Intuitiva</span></h2>
+                 <p class="dl-section-subtitle" data-animation="fade-in-up" data-delay="100">Navegue com facilidade e encontre o que precisa em segundos.</p>
+                 <div class="dl-showcase-slider-wrapper" data-animation="zoom-in" data-delay="150">
+                     <div class="dl-showcase-slider">
+                        <div class="slider-item">
+                             <h3 class="slider-title">Tela Inicial</h3>
+                            <img src="img/fine.png" alt="Screenshot App - Mapa Interativo com Pins Coloridos" class="dl-screenshot">
+                        </div>
+                        <div class="slider-item">
+                             <h3 class="slider-title">Localizar ATM ou Agente</h3>
+                            <img src="img/fine2.jpg" alt="Screenshot App - Informação Detalhada do ATM" class="dl-screenshot">
+                        </div>
+                        <div class="slider-item">
+                             <h3 class="slider-title">Fazer Levantamento</h3>
+                            <img src="img/fine3.jpg" alt="Screenshot App - Opções de Reporte de Status" class="dl-screenshot">
+                        </div>
+                        <div class="slider-item">
+                             <h3 class="slider-title">Levamntamento Obtido</h3>
+                            <img src="img/fine4.png" alt="Screenshot App - Interface em Modo Escuro" class="dl-screenshot"> <!-- ADICIONE SCREENSHOT DARK -->
+                        </div>
+                     </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- ===== Benefits Section (Visualmente mais forte) ===== -->
+        <section class="dl-section dl-benefits" id="dl-benefits">
+             <div class="container dl-benefits__container">
+                 <div class="dl-benefits__visual" data-animation="fade-in-left" data-delay="200">
+                     <img src="img/banner.png" alt="Screenshot App - Mapa Interativo com Pins Coloridos" class="dl-screenshot">
+                 </div>
+                 <div class="dl-benefits__content">
+                     <h2 class="dl-section-title" data-animation="fade-in-up">Menos Stress, <span class="highlight-gradient">Mais Controlo.</span></h2>
+                     <p class="dl-section-subtitle" data-animation="fade-in-up" data-delay="100">As vantagens que fazem a diferença no seu dia:</p>
+                     <ul class="dl-benefits-list">
+                        <li class="dl-benefit-item" data-animation="fade-in-right" data-delay="200">
+                             <i class="ri-timer-flash-fill"></i> <!-- Ícone diferente -->
+                            <div>
+                                <h4>Poupe Tempo Precioso</h4>
+                                <span>Chega de andar às voltas. Vá direto ao ATM funcional.</span>
+                            </div>
+                        </li>
+                         <li class="dl-benefit-item" data-animation="fade-in-right" data-delay="300">
+                            <i class="ri-wallet-3-fill"></i> <!-- Ícone diferente -->
+                             <div>
+                                <h4>Maximize Sua Economia</h4>
+                                <span>Evite taxas informais e otimize suas deslocações.</span>
+                            </div>
+                        </li>
+                        <li class="dl-benefit-item" data-animation="fade-in-right" data-delay="400">
+                             <i class="ri-shield-star-fill"></i> <!-- Ícone diferente -->
+                              <div>
+                                <h4>Aumente Sua Segurança</h4>
+                                <span>Planeie levantamentos em locais e horários mais seguros.</span>
+                            </div>
+                        </li>
+                        <li class="dl-benefit-item" data-animation="fade-in-right" data-delay="500">
+                             <i class="ri-smartphone-fill"></i> <!-- Ícone diferente -->
+                              <div>
+                                <h4>Conveniência Total</h4>
+                                <span>Toda a informação que precisa, na palma da sua mão, 24/7.</span>
+                            </div>
+                        </li>
+                     </ul>
+                     <a href="#dl-cta-final" class="button button--primary button--flex" data-animation="fade-in-up" data-delay="600" style="color: white;">
+                        <i class="ri-download-cloud-2-line" style="color: white;"></i> Baixar Agora
+                     </a>
+                 </div>
+            </div>
+        </section>
+
+        <!-- ===== Final CTA Section ===== -->
+        <section class="dl-section dl-cta-final" id="dl-cta-final">
+             <div class="download__background"> <!-- Reutilizando shapes do index -->
+                <div class="shape shape-4 dl-shape-adjust-4"></div>
+                <div class="shape shape-5 dl-shape-adjust-5"></div>
+            </div>
+            <div class="container text-center">
+                 <h2 class="dl-cta-title" data-animation="fade-in-up">O Futuro Chegou. <span class="highlight-gradient">Instale Já!</span></h2>
+                 <p class="dl-cta-description" data-animation="fade-in-up" data-delay="150">
+                     Faça parte da revolução no acesso a dinheiro em Luanda. Download gratuito e seguro.
+                 </p>
+                <div class="dl-cta-buttons" data-animation="fade-in-up" data-delay="300">
+                    <!-- Botões grandes e claros -->
+                    <a href="#" class="button button--primary large-button button--flex" aria-label="Download no Google Play" style="color: white;">
+                        <i class="ri-google-play-fill"></i> Google Play
+                    </a>
+                     <a href="#" class="button button--secondary large-button button--flex" aria-label="Download na App Store" style="color: white;">
+                        <i class="ri-apple-fill"></i> App Store
+                    </a>
+                </div>
+                 <div class="dl-other-downloads" data-animation="fade-in-up" data-delay="400">
+                     <p>Ou baixe diretamente (utilizadores avançados):</p>
+                     <a href="#" class="button button--ghost button--small button--flex" aria-label="Download APK direto">
+                        <i class="ri-android-fill"></i> Download APK (v2.1.0)
+                    </a>
+                    <a href="#" class="button button--ghost button--small button--flex" aria-label="Download IPA direto">
+                        <i class="ri-app-store-line"></i> Download IPA (v2.1.0)
+                    </a>
+                 </div>
+
+                 <div class="dl-qr-codes-wrapper" data-animation="fade-in" data-delay="550">
+                    <h3 class="dl-qr-title">Escanear para Baixar:</h3>
+                     <div class="dl-qr-codes">
+                         <div class="dl-qr-code-item">
+                             <div class="dl-qr-code-image">
+                                <img src="img/qr.png" alt="QR Code para baixar Android"> <!-- QR ANDROID -->
+                             </div>
+                             <span><i class="ri-android-line"></i> Android</span>
+                         </div>
+                         <div class="dl-qr-code-item">
+                             <div class="dl-qr-code-image">
+                                <img src="img/qr.png" alt="QR Code para baixar iOS"> <!-- QR IOS -->
+                             </div>
+                             <span><i class="ri-apple-line"></i> iOS</span>
+                         </div>
+                     </div>
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER (SHARED) ===== -->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="index.html" class="footer__logo">
+                    <img src="img/2.png" alt="ATM na Mão Logo" class="footer__logo-img">
+                    <span>ATM NA MÃO</span>
+                </a>
+                <p class="footer__description">Transformando o acesso a dinheiro em Luanda. <br> Simples, rápido e sem taxas abusivas.</p>
+                 <div class="footer__social">
+                    <a href="https://web.facebook.com/pixelhubangola" target="_blank" aria-label="ATM na Mão no Facebook" class="footer__social-link"><i class="ri-facebook-fill"></i></a>
+                    <a href="https://www.instagram.com/pixelhub_tech/" target="_blank" aria-label="ATM na Mão no Instagram" class="footer__social-link"><i class="ri-instagram-fill"></i></a>
+                    <a href="https://www.linkedin.com/company/pixelhub-angola/" target="_blank" aria-label="Visitar LinkedIn" class="footer__social-link"><i class="ri-linkedin-fill"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=244930880427&text=Olá%20ATM%20na%20Mão!" target="_blank" aria-label="ATM na Mão no WhatsApp" class="footer__social-link"><i class="ri-whatsapp-fill"></i></a>
+                </div>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">App</h3>
+                <ul class="footer__links">
+                     <li><a href="#dl-features" class="footer__link">Funcionalidades</a></li>
+                     <li><a href="#dl-benefits" class="footer__link">Benefícios</a></li>
+                     <li><a href="#dl-cta-final" class="footer__link">Download</a></li>
+                     <li><a href="index.html#faq" class="footer__link">FAQ</a></li> <!-- Link para FAQ na index -->
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Legal</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Política de Privacidade</a></li>
+                    <li><a href="#" class="footer__link">Termos de Serviço</a></li>
+                    <li><a href="#" class="footer__link">Política de Cookies</a></li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Contato</h3>
+                <ul class="footer__links">
+                    <li><a href="mailto:suporte@atmnamao.ao" class="footer__link">suporte@atmnamao.ao</a></li>
+                    <li><a href="index.html#contact" class="footer__link">Formulário de Contato</a></li> <!-- Link para Contato na index -->
+                    <li><span class="footer__link--static"><i class="ri-map-pin-line"></i> Luanda, Angola</span></li>
+                </ul>
+            </div>
+        </div>
+         <div class="footer__bottom">
+             <span class="footer__copy">© <span id="current-year"></span> ATM na Mão by <a href="https://pixelhub.ao" target="_blank" rel="noopener noreferrer">Pixelhub</a>. Todos os direitos reservados.</span>
+         </div>
+    </footer>
+
+    <!-- ===== SCROLL UP (SHARED) ===== -->
+    <a href="#" class="scrollup" id="scroll-up" aria-label="Voltar ao topo">
+        <i class="ri-arrow-up-s-line"></i>
+    </a>
+
+   <!-- ===== SCROLL UP ===== -->
+    <a href="#" class="scrollup" id="scroll-up" aria-label="Voltar ao topo">
+        <i class="ri-arrow-up-s-line"></i>
+    </a>
+
+    <!-- ===== SCRIPTS ===== -->
+    <!-- jQuery (Necessário para Slick Slider) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Slick Slider JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Main JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
